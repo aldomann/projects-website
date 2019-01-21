@@ -47,3 +47,14 @@ a img {
 sup, sub {
     line-height: 0;
 }
+
+a {
+    color: $black;
+    text-decoration: none;
+    border-bottom: 1px solid;
+
+    &:hover {
+        border-bottom: none;
+        color: #9c9c9c;
+    }
+}

@@ -1,51 +1,49 @@
 <div class="user-details">
-  <h2>Git repositories</h2>
+  <h2>Git Repositories</h2>
 </div>
 
-<div class="user">
-  <div class="tech">
-    <h3>Repo A</h3>
-    <i class="devicon-html5-plain-wordmark"></i>
-    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-      Vinyl XOXO lumbersexual</p>
-  </div>
-  <div class="tech">
-    <h3>Repo B</h3>
-    <i class="devicon-bootstrap-plain-wordmark colored"></i>
-    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-      Vinyl XOXO lumbersexual</p>
-  </div>
-  <div class="tech">
-    <h3>Repo X</h3>
-    <i class="devicon-javascript-plain colored"></i>
-    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-      Vinyl XOXO lumbersexual</p>
-  </div>
-  <div class="tech">
-    <h3>Repo Y</h3>
-    <i class="devicon-gulp-plain colored"></i>
-    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-      Vinyl XOXO lumbersexual</p>
-  </div>
+<div class="small-projects-container">
+  {% include small-project.html
+    title="mockups"
+    image="mockups.png"
+    link="https://gitlab.com/aldomann/mockups"
+    description="Application mockups. Mainly redesigns of popular apps following GNOME's Human Interface Guidelines."
+  %}
+
+  {% include small-project.html
+    title="apps-scripts"
+    image="apps-scripts.png"
+    link="https://gitlab.com/aldomann/apps-scripts"
+    description="Post-installation scripts for GNU/Linux systems."
+  %}
+
+  {% include small-project.html
+    title="latex-templates"
+    image="latex-templates.png"
+    link="https://gitlab.com/aldomann/latex-templates"
+    description="LaTeX templates and style files for common documents."
+  %}
+
 </div>
 
-<div class="user">
-  <div class="tech">
-    <h3>Repo A</h3>
-    <i class="devicon-html5-plain-wordmark"></i>
-    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-      Vinyl XOXO lumbersexual</p>
-  </div>
-  <div class="tech">
-    <h3>Repo B</h3>
-    <i class="devicon-bootstrap-plain-wordmark colored"></i>
-    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-      Vinyl XOXO lumbersexual</p>
-  </div>
-  <div class="tech">
-    <h3>Repo X</h3>
-    <i class="devicon-javascript-plain colored"></i>
-    <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-      Vinyl XOXO lumbersexual</p>
-  </div>
+<div class="small-projects-container">
+  {% include small-project.html
+    title="gbcat-keyboard"
+    image="gbcat-keyboard.png"
+    link="https://gitlab.com/aldomann/gbcat-keyboard"
+    description="Custom X KeyBoard layout for English (UK) + Catalan."
+  %}
+
+  {% include small-project.html
+    title="uscat-keyboard"
+    image="uscat-keyboard.png"
+    link="https://gitlab.com/aldomann/uscat-keyboard"
+    description="Custom X KeyBoard layout for English (US) + Catalan."
+  %}
 </div>
+
+<div class="user-details">
+  <a class="extra-link" href="https://gitlab.com/aldomann/projects">GitLab Repos</a>
+  <a class="extra-link" href="https://github.com/aldomann?tab=repositories">GitHub Repos</a>
+</div>
+
