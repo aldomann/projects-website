@@ -1,19 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,300,800,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i');
 
 body {
+    @include sans;
     margin: 0;
     padding: 0;
     font-size: 100%;
     line-height: 1.5;
-    color: #555;
-    font-family: 'Montserrat', sans-serif;
+    color: $text-color;
 }
+
 article, aside, figcaption, figure, footer, header, nav, section {
     display: block;
 }
+
 h1, h2, h3, h4, stong {
-    margin-top: 1em;
-    padding-top: 1em;
+    @include title-sans;
+    // padding-top: 0.25em;
     line-height: 1.25;
     color: #333;
 }
@@ -22,6 +25,8 @@ h1 {
 }
 h2 {
     font-size: 2rem;
+    margin-top: 1.5em;
+    margin-bottom: 0.25em;
 }
 h3 {
     font-size: 1.5rem;
@@ -34,7 +39,7 @@ ul, ol {
     padding-left: 40px;
 }
 p, figure {
-    margin: 1em 0;
+    margin: 0.5em 0;
 }
 a img {
     border: none;

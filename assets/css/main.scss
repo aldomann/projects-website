@@ -5,9 +5,11 @@
 @import "lib/fontawesome";
 @import "lib/devicon";
 
+@import "mixins";
+@import 'variables';
+
 @import 'base';
-@import 'vars';
-@import 'animation';
+// @import 'animation';
 @import 'header';
 @import 'about';
 @import 'projects';
