@@ -89,6 +89,7 @@
               background-color 0.1s ease-out,
               border-color 0.1s ease-out;
   &:hover {
+    border: 1px solid $main;
     background-color: $green;
     border-color: $green;
     color: #fff;
@@ -100,8 +101,8 @@
     background-color: $green;
     border-color: $green;
     color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
+    transition: color 0.1s ease-in,
+                background-color 0.1s ease-in,
+                border-color 0.1s ease-in;
   }
 }
