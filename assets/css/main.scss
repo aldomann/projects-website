@@ -4,14 +4,19 @@
 @import "lib/normalize";
 @import "lib/fontawesome";
 @import "lib/devicon";
+@import "fonts";
 
 @import "mixins";
 @import 'variables';
 
 @import 'base';
-// @import 'animation';
-@import 'header';
 @import 'about';
 @import 'projects';
 @import 'projects-small';
+
+// Header
+@import "header";
+@import "social-media";
+
+// Footer
 @import 'footer';
