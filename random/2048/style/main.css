@@ -634,7 +634,7 @@ hr {
   .tile, .tile .tile-inner {
     width: 58px;
     height: 58px;
-    color: #ff2334;
+    /*color: #ff2334;*/
     line-height: 67.5px; }
   .tile.tile-position-1-1 {
     -webkit-transform: translate(0px, 0px);

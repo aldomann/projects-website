@@ -9,15 +9,15 @@ $tile-border-radius: 3px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: #776E65;
-$bright-text-color: #f9f6f2;
+$text-color: #444;
+$bright-text-color: #fff;
 
 $tile-color: #eee4da;
 $tile-gold-color: #edc22e;
 $tile-gold-glow-color: lighten($tile-gold-color, 15%);
 
 $game-container-margin-top: 40px;
-$game-container-background: #bbada0;
+$game-container-background: #555;
 
 $transition-speed: 100ms;
 
@@ -25,9 +25,9 @@ html, body {
   margin: 0;
   padding: 0;
 
-  background: #faf8ef;
+  background: #fff;
   color: $text-color;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
 }
 
@@ -111,7 +111,7 @@ h1.title {
 }
 
 .best-container:after {
-  content: "Best"
+  content: "Best";
 }
 
 p {
@@ -168,7 +168,7 @@ hr {
 }
 
 // Game field mixin used to render CSS at different width
-@mixin game-field {
+@mixin game-field($field-width, $grid-spacing, $grid-row-cells, $tile-size, $tile-border-radius, $game-container-margin-top) {
   .game-container {
     margin-top: $game-container-margin-top;
     position: relative;
@@ -226,9 +226,9 @@ hr {
         margin-left: 9px;
         // margin-top: 59px;
 
-	&.keep-playing-button {
-	  display: none;
-	}
+  &.keep-playing-button {
+    display: none;
+  }
       }
 
       @include animation(fade-in 800ms ease $transition-speed * 12);
@@ -238,9 +238,9 @@ hr {
         background: rgba($tile-gold-color, .5);
         color: $bright-text-color;
 
-	a.keep-playing-button {
-	  display: inline-block;
-	}
+  a.keep-playing-button {
+    display: inline-block;
+  }
       }
 
       &.game-won, &.game-over {
@@ -292,7 +292,7 @@ hr {
     &, .tile-inner {
       width: ceil($tile-size);
       height: ceil($tile-size);
-      line-height: $tile-size + 10px;
+      line-height: ceil($tile-size);
     }
 
     // Build position classes
@@ -309,7 +309,7 @@ hr {
 }
 
 // End of game-field mixin
-@include game-field;
+@include game-field($field-width, $grid-spacing, $grid-row-cells, $tile-size, $tile-border-radius, $game-container-margin-top);
 
 .tile {
   position: absolute; // Makes transforms relative to the top-left corner
@@ -336,17 +336,17 @@ hr {
   $limit: 11;
 
   // Colors for all 11 states, false = no special color
-  $special-colors: false false, // 2
-                   false false, // 4
-                   #f78e48 true, // 8
-                   #fc5e2e true, // 16
-                   #ff3333 true, // 32
-                   #ff0000 true, // 64
-                   false true, // 128
-                   false true, // 256
-                   false true, // 512
-                   false true, // 1024
-                   false true; // 2048
+  $special-colors: #ffb170 true, // 2
+                   #f07d65 true, // 4
+                   #ff733f true, // 8
+                   #ec4863 true, // 16
+                   #e73f9e true, // 32
+                   #a157e8 true, // 64
+                   #7178da true, // 128
+                   #45a0f2 true, // 256
+                   #96c859 true, // 512
+                   #c5d815 true, // 1024
+                   #e9c921 true; // 2048
 
   // Build tile colors
   @while $exponent <= $limit {
@@ -371,7 +371,8 @@ hr {
       }
 
       // Set background
-      background: $mixed-background;
+      // background: $mixed-background;
+      background: $special-background;
 
       // Add glow
       $glow-opacity: max($exponent - 4, 0) / ($limit - 4);
@@ -527,7 +528,7 @@ hr {
   }
 
   // Render the game field at the right width
-  @include game-field;
+  @include game-field($field-width, $grid-spacing, $grid-row-cells, $tile-size, $tile-border-radius, $game-container-margin-top);
 
   // Rest of the font-size adjustments in the tile class
   .tile .tile-inner {
