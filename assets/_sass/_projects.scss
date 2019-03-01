@@ -43,6 +43,7 @@
     width: 48%;
   }
 }
+
 .images-right {
   @media only screen and (min-width: $cut) {
     float: right;
@@ -59,6 +60,45 @@
   @media only screen and (min-width: $cut) {
     float: left;
     width: 48%;
+  }
+  img {
+    @media only screen and (min-width: $cut) {
+      float: left;
+    }
+  }
+}
+
+.contents-narrow {
+  @media only screen and (min-width: $cut) {
+    margin-left: 0;
+    width: 73%;
+  }
+}
+
+.contents-right-narrow {
+  @media only screen and (min-width: $cut) {
+    float: right;
+    margin-top: -5%;
+    width: 73%;
+  }
+}
+
+.images-right-narrow {
+  @media only screen and (min-width: $cut) {
+    float: right;
+    width: 27%;
+  }
+  img {
+    @media only screen and (min-width: $cut) {
+      float: right;
+    }
+  }
+}
+
+.images-left-narrow {
+  @media only screen and (min-width: $cut) {
+    float: left;
+    width: 27%;
   }
   img {
     @media only screen and (min-width: $cut) {
