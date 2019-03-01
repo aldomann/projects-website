@@ -86,7 +86,7 @@
 .images-right-narrow {
   @media only screen and (min-width: $cut) {
     float: right;
-    width: 27%;
+    width: 25%;
   }
   img {
     @media only screen and (min-width: $cut) {
@@ -98,7 +98,7 @@
 .images-left-narrow {
   @media only screen and (min-width: $cut) {
     float: left;
-    width: 27%;
+    width: 25%;
   }
   img {
     @media only screen and (min-width: $cut) {
