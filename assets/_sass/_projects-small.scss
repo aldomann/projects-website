@@ -113,3 +113,21 @@
                 border-color 0.1s ease-in;
   }
 }
+
+.small-project-badge {
+  font-size: 0.8em;
+  font-weight: 600;
+  display: block;
+  float: left;
+  position: absolute;
+  margin-left: 45px;
+  padding: 2px 5px;
+  border: 1px;
+  background-color: $wip;
+  border-color: $wip-border;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
